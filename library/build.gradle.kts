@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+group = "com.sagrishin.extended.navigation.library"
+
 android {
     namespace = "com.sagrishin.extended.navigation.library"
     compileSdk = 33
