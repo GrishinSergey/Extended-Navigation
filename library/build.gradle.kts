@@ -20,9 +20,17 @@ android {
         debug {}
     }
 
+    buildFeatures {
+        compose = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
 
     kotlinOptions {
@@ -38,6 +46,9 @@ android {
 
 dependencies {
     implementation("androidx.navigation:navigation-compose:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("androidx.compose.ui:ui:1.5.0-beta02")
+
     implementation("com.google.code.gson:gson:2.10.1")
 }
 
@@ -50,9 +61,6 @@ publishing {
             version = "1.0.0"
 
             afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-
-//                artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
-//            from(components["java"])
         }
     }
 }
