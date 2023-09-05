@@ -30,7 +30,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.4.1"
     }
 
     kotlinOptions {
@@ -58,7 +58,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.sagrishin.extended"
             artifactId = "nav-library"
-            version = "1.0.1"
+            version = "1.0.1.1"
 
             afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
         }

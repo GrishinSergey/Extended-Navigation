@@ -17,7 +17,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.sagrishin.extended"
             artifactId = "nav-annotations"
-            version = "1.0.1"
+            version = "1.0.1.1"
 
             from(components["java"])
         }
