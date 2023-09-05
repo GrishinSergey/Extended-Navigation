@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 group = "com.sagrishin.extended.navigation.library"
@@ -38,4 +39,20 @@ android {
 dependencies {
     implementation("androidx.navigation:navigation-compose:2.6.0")
     implementation("com.google.code.gson:gson:2.10.1")
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.sagrishin.extended"
+            artifactId = "nav-library"
+            version = "1.0.0"
+
+            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+
+//                artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
+//            from(components["java"])
+        }
+    }
 }
