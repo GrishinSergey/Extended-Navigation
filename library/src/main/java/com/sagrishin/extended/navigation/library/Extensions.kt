@@ -5,6 +5,8 @@ import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
+import com.sagrishin.extended.navigation.library.ExtendedNavigationGsonUtils.Companion.fromJson
+import com.sagrishin.extended.navigation.library.ExtendedNavigationGsonUtils.Companion.toJson
 import kotlin.reflect.KClass
 
 fun stringArgument(name: String, default: String? = null, isNullable: Boolean = false): NamedNavArgument {
