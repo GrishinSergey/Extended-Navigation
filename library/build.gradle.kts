@@ -58,7 +58,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.sagrishin.extended"
             artifactId = "nav-library"
-            version = "1.0.1.3"
+            version = "1.0.2"
 
             afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
         }
