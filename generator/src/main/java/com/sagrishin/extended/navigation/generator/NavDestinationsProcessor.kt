@@ -140,7 +140,7 @@ class NavDestinationsProcessor : AbstractProcessor() {
             if (argsValue == null) {
                 add("return \"\$Route\"")
             } else {
-                val toJson = MemberName("com.sagrishin.extended.navigation.library", "toJson")
+                val toJson = MemberName("com.sagrishin.extended.navigation.library.ExtendedNavigationGsonUtils", "toJson")
                 add("return \"\$Route/\${args.%M()}\"", toJson)
             }
         }).returns(String::class).build()
