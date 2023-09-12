@@ -12,7 +12,7 @@ import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonWriter
 import kotlin.reflect.KClass
 
-private class SealedTypeAdapterFactory<T : Any> private constructor(
+class SealedTypeAdapterFactory<T : Any> private constructor(
     private val baseType: KClass<T>,
     private val typeFieldName: String
 ) : TypeAdapterFactory {

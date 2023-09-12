@@ -49,6 +49,8 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
     implementation("androidx.compose.ui:ui:1.5.0-beta02")
 
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.0")
+
     implementation("com.google.code.gson:gson:2.10.1")
 }
 
@@ -58,7 +60,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.sagrishin.extended"
             artifactId = "nav-library"
-            version = "1.0.2"
+            version = "1.0.2.1"
 
             afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
         }
